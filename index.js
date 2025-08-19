@@ -16,6 +16,7 @@ const assetLinks = [
   },
 ];
 
+
 app.get("/.well-known/assetlinks.json", (req, res) => {
   res.json(assetLinks);
 });
