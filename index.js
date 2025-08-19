@@ -17,13 +17,13 @@ const assetLinks = [
   },
 ];
 
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
+
 app.get("/.well-known/assetlinks.json", (req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.json(assetLinks);
-});
-
-app.get('/', (req, res) => {
-    res.send('Hello World');
 });
 
 app.listen(PORT, () => {
