@@ -16,8 +16,8 @@ const assetLinks = [
   },
 ];
 
-
 app.get("/.well-known/assetlinks.json", (req, res) => {
+  res.setHeader("Content-Type", "application/json");
   res.json(assetLinks);
 });
 
