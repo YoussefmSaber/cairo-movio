@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 export default function MovioLanding() {
   const { t } = useTranslation();
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const githubReleaseUrl = "https://github.com/Cairo-Squad/Movio/releases";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,13 +83,7 @@ export default function MovioLanding() {
                 variant="hero" 
                 size="lg" 
                 className="text-lg px-8 py-4"
-                onClick={() => {
-                    const link = document.createElement("a");
-                    link.href = "/app-release.apk"; // file inside public/
-                    link.download = "app-release.apk"; // suggest a filename
-                    link.click();
-                      }
-                  }>
+                onClick={() => window.open(githubReleaseUrl, "_blank")}>
                 <Download className="h-5 w-5" />
                 {t('downloadLatest')}
               </Button>
@@ -216,13 +211,7 @@ export default function MovioLanding() {
                 variant="default" 
                 size="lg" 
                 className="text-lg px-8 py-4"
-                onClick={() => {
-                    const link = document.createElement("a");
-                    link.href = "/Movio.apk"; // file inside public/
-                    link.download = "Movio.apk"; // suggest a filename
-                    link.click();
-                    }
-                }>
+                onClick={() => window.open(githubReleaseUrl, "_blank")}>
                 <Download className="h-5 w-5" />
                 {t('downloadLatest')}
                 <ExternalLink className="h-4 w-4" />
