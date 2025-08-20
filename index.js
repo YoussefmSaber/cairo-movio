@@ -23,16 +23,16 @@ const assetLinks = [
   }
 ];
 
-// Serve Vite production build
-app.use(express.static(path.join(__dirname, "client/dist")));
 
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "client/dist", "index.html"));
-});
+app.use(express.static(path.join(__dirname, "client/dist")));
 
 app.get("/.well-known/assetlinks.json", (req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.json(assetLinks);
+});
+
+app.get(/.*/, (req, res) => {
+  res.redirect("/");
 });
 
 app.listen(PORT, () => {
