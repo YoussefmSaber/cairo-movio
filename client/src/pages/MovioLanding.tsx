@@ -218,8 +218,8 @@ export default function MovioLanding() {
                 className="text-lg px-8 py-4"
                 onClick={() => {
                     const link = document.createElement("a");
-                    link.href = "/app-release.apk"; // file inside public/
-                    link.download = "app-release.apk"; // suggest a filename
+                    link.href = "/Movio.apk"; // file inside public/
+                    link.download = "Movio.apk"; // suggest a filename
                     link.click();
                     }
                 }>
