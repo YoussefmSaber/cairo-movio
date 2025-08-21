@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import phoneMockup1 from "@/assets/phone-mockup-1.png";
 import phoneMockup2 from "@/assets/phone-mockup-2.png";
 import phoneMockup3 from "@/assets/phone-mockup-3.png";
+import phoneMockup4 from "@/assets/phone-mockup-4.png";
 
 export function ScreenshotCarousel() {
   const { t } = useTranslation();
@@ -22,24 +23,12 @@ export function ScreenshotCarousel() {
     {
       id: 3,
       image: phoneMockup3,
-      title: t('trendingContent'),
-      description: t('trendingContentDesc')
-    },
-    {
-      id: 4,
-      image: phoneMockup1,
       title: t('exploreMovies'),
       description: t('exploreMoviesDesc')
     },
     {
-      id: 5,
-      image: phoneMockup2,
-      title: t('realtimeTrending'),
-      description: t('realtimeTrendingDesc')
-    },
-    {
-      id: 6,
-      image: phoneMockup3,
+      id: 4,
+      image: phoneMockup4,
       title: t('offlineAccess'),
       description: t('offlineAccessDesc')
     }
@@ -48,7 +37,7 @@ export function ScreenshotCarousel() {
   return (
     <div className="max-w-6xl mx-auto">
       {/* Grid Layout - 3x2 on desktop, 2x3 on tablets, 1x6 on mobile */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         {screenshots.map((screenshot) => (
           <div key={screenshot.id} className="space-y-6">
             {/* Image */}
